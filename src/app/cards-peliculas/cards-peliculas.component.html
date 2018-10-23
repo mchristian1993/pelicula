@@ -1,0 +1,21 @@
+<ng-container  *ngFor="let categoria of categorias">
+<div class="container">
+
+<div class="card" id="id" style="width: 18rem;" *ngFor="let peliculas of categoria.peliculas">
+  <div *ngIf="categoria.id==id; else elseBlock">
+  <img class="card-img-top" src="{{peliculas.imagen}} " >
+  <div class="card-body">
+    <p class="card-text">{{peliculas.name_pelicula}}</p>
+  </div>
+</div>
+</div>
+</div>
+</ng-container>
+<ng-template #elseBlock>
+
+
+
+</ng-template>
+
+
+
